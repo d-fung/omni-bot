@@ -18,6 +18,7 @@ async def on_ready() -> None:
     await bot.load_extension('cogs.sports')
     await bot.load_extension('cogs.llm')
     await bot.load_extension('cogs.general')
+    await bot.load_extension('cogs.stocks')
 
     await bot.tree.sync()
     print('Commands synced!')

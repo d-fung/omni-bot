@@ -4,10 +4,10 @@ An all-in-one Discord bot that provides sports statistics, injury reports, betti
 
 📸 Screenshots
 ### Bot Commands in Action
-<img width="444" height="372" alt="Image" src="https://github.com/user-attachments/assets/cc48451b-9be9-4b7d-94e5-1383e670be1f" />
+<img width="350" height="350" alt="Image" src="https://github.com/user-attachments/assets/cc48451b-9be9-4b7d-94e5-1383e670be1f" />
 
 ### Sports Betting Lines
-<img width="376" height="353" alt="Image" src="https://github.com/user-attachments/assets/dd4fea42-9548-41ec-ad28-a35761fdd7b8" />
+<img width="350" height="350" alt="Image" src="https://github.com/user-attachments/assets/dd4fea42-9548-41ec-ad28-a35761fdd7b8" />
 
 ### AI Chat Response
 <img width="599" height="221" alt="Image" src="https://github.com/user-attachments/assets/d17491c0-0c13-4311-b57f-89bf53d09d95" />
