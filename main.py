@@ -22,6 +22,18 @@ async def on_ready() -> None:
     await bot.tree.sync()
     print('Commands synced!')
 
+@bot.event
+async def on_message(message: Message) -> None:
+    if message.author == bot.user:
+        return
+
+    username: str = str(message.author)
+    user_message: str = message.content
+    channel: str = str(message.channel)
+
+    print(f'[{channel}] {username}: "{user_message}"')
+    
+    await bot.process_commands(message)
 
 def main() -> None:
     bot.run(TOKEN)
