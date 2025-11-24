@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from helper_functions import generate_response_list
+from .helper_functions import generate_response_list
 
 def get_injuries(sport, team=None):
     url = f'https://www.espn.com/{sport}/injuries'

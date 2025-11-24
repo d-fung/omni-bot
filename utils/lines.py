@@ -2,7 +2,7 @@ import requests
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
 import os
-from helper_functions import decimal_to_american, format_handicap, format_with_decimal, generate_response_list
+from .helper_functions import decimal_to_american, format_handicap, format_with_decimal, generate_response_list
 
 load_dotenv()
 API_KEY = os.getenv('X-RAPIDAPI-KEY')

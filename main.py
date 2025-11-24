@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-from discord import Intents
+from discord import Intents, Message
 from discord.ext import commands
 import os
 

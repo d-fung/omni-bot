@@ -1,0 +1,138 @@
+# 🤖 Omni Bot
+
+An all-in-one Discord bot that provides sports statistics, injury reports, betting lines, and AI-powered chat assistance.
+
+## ✨ Features
+
+### 🏈 Sports Commands
+- **Betting Lines** - Get real-time betting lines for NFL, NBA, and MLB
+- **Injury Reports** - Track player injuries across major sports leagues
+- Multi-sport support with easy-to-read embed formatting
+
+### 🤖 AI Assistant
+- **AI Chat** - Ask questions and get intelligent responses powered by DeepSeek AI
+- Natural language processing for conversational interactions
+
+### ⚙️ General Utilities
+- **Bot Information** - View bot stats and features
+- **Server Information** - Get details about your Discord server
+- **Latency Check** - Monitor bot performance
+- **Help Command** - Easy-to-navigate command reference
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Python 3.9 or higher
+- Discord Bot Token
+- DeepSeek API Key
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/omni-bot.git
+   cd omni-bot
+   ```
+
+2. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Set up environment variables**
+   
+   Create a `.env` file in the root directory:
+   ```env
+   TOKEN=your_discord_bot_token
+   DEEPSEEK_API_KEY=your_deepseek_api_key
+   ```
+
+4. **Run the bot**
+   ```bash
+   python main.py
+   ```
+
+## 📋 Commands
+
+All commands use Discord's slash command interface. Type `/` in Discord to see the full list.
+
+### Sports Commands
+| Command | Description | Usage |
+|---------|-------------|-------|
+| `/lines` | Get betting lines | `/lines sport:nba` |
+| `/injuries` | Get injury reports | `/injuries sport:nfl` |
+
+**Supported Sports:** NFL, NBA, MLB
+
+### AI Commands
+| Command | Description | Usage |
+|---------|-------------|-------|
+| `/ask` | Ask AI a question | `/ask query:What's the weather?` |
+
+### General Commands
+| Command | Description |
+|---------|-------------|
+| `/help` | Show all commands |
+| `/ping` | Check bot latency |
+| `/info` | Display bot information |
+| `/serverinfo` | Show server details |
+
+## 🏗️ Project Structure
+
+```
+omni-bot/
+├── cogs/
+│   ├── __init__.py
+│   ├── general.py      # General utility commands
+│   ├── llm.py          # AI chat functionality
+│   └── sports.py       # Sports statistics & betting
+├── utils/
+│   ├── __init__.py
+│   ├── ai_helper.py    # AI response handling
+│   ├── helper_functions.py
+│   ├── injuries.py     # Injury data fetching
+│   └── lines.py        # Betting lines fetching
+├── .env                # Environment variables (not tracked)
+├── .gitignore
+├── main.py             # Bot entry point
+├── requirements.txt
+└── README.md
+```
+
+## 🛠️ Tech Stack
+
+- **Discord.py** - Discord bot framework
+- **OpenAI SDK** - AI integration (DeepSeek)
+- **Python-dotenv** - Environment variable management
+
+## 🔧 Configuration
+
+### Bot Permissions Required
+- Read Messages
+- Send Messages
+- Embed Links
+- Use Slash Commands
+
+### Intents Required
+- Message Content Intent (for logging)
+
+## 📝 Development
+
+### Adding New Commands
+
+Commands are organized into cogs for modularity:
+
+1. Navigate to the appropriate cog file in `cogs/`
+2. Add your command using the `@app_commands.command()` decorator
+3. The command will automatically sync on bot startup
+
+Example:
+```python
+@app_commands.command(name='example', description='An example command')
+async def example(self, interaction: discord.Interaction):
+    await interaction.response.send_message("Hello!")
+```
+
+### Adding New Utilities
+
+Create new utility functions in the `utils/` folder and import them into the relevant cog.

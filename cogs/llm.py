@@ -1,7 +1,7 @@
 from discord.ext import commands
 from discord import app_commands
 import discord
-from utils.llm_response import get_response
+from utils.ai_helper import get_response
 
 class LLM(commands.Cog):
     """AI-powered chat and assistance"""
