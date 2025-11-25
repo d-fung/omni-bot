@@ -89,9 +89,9 @@ All commands use Discord's slash command interface. Type `/` in Discord to see t
 ### Stock Commands
 | Command | Description | Usage |
 |---------|-------------|-------|
-| `/stock` | Get stock information and chart | `/stock ticker:AAPL period:1mo` |
+| `/stock` | Get stock information and chart | `/stock ticker:AAPL period:1m` |
 
-**Supported Periods:** 1d, 5d, 1mo, 3mo, 6mo, 1y, 5y
+**Supported Periods:** 1d, 5d, 1m, 3m, 6m, 1y, 5y
 
 ### AI Commands
 | Command | Description | Usage |
