@@ -19,6 +19,7 @@ def create_stock_chart(ticker: str, period: str = "1d"):
     Returns:
         discord.File object or None if error
     """
+    fig = None
     try:
         stock = yf.Ticker(ticker)
         
@@ -210,6 +211,12 @@ def create_stock_chart(ticker: str, period: str = "1d"):
     except Exception as e:
         print(f"Error creating chart for {ticker}: {e}")
         return None
+
+    finally:
+        if fig is not None:
+            plt.close(fig)
+        plt.close('all') # cleans up any orphaned figures
+
 
 def get_stock_info(ticker: str, period: str = "1d"):
     """
