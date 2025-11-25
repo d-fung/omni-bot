@@ -67,6 +67,8 @@ An all-in-one Discord bot that provides sports statistics, injury reports, betti
    ```env
    TOKEN=your_discord_bot_token
    DEEPSEEK_API_KEY=your_deepseek_api_key
+   X-RAPIDAPI-KEY=your_x-rapidapi_key
+   X-RAPIDAPI-HOST=pinnacle-odds.p.rapidapi.com
    ```
 
 4. **Run the bot**
