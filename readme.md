@@ -6,6 +6,10 @@ An all-in-one Discord bot that provides sports statistics, injury reports, betti
 ### Bot Commands in Action
 <img width="350" height="350" alt="Image" src="https://github.com/user-attachments/assets/cc48451b-9be9-4b7d-94e5-1383e670be1f" />
 
+### Stock Market Prices
+
+<img width="350" height="350" alt="Image" src="https://github.com/user-attachments/assets/de5bd048-e4f5-4b1e-8a61-a6349b2d0bba" />
+
 ### Sports Betting Lines
 <img width="350" height="350" alt="Image" src="https://github.com/user-attachments/assets/dd4fea42-9548-41ec-ad28-a35761fdd7b8" />
 
@@ -20,6 +24,12 @@ An all-in-one Discord bot that provides sports statistics, injury reports, betti
 - **Betting Lines** - Get real-time betting lines for NFL, NBA, and MLB
 - **Injury Reports** - Track player injuries across major sports leagues
 - Multi-sport support with easy-to-read embed formatting
+
+### 📊 Stock Market
+- **Real-time Stock Data** - Get current stock prices, charts, and key metrics
+- **Interactive Charts** - Visual price charts with pre-market and after-hours data
+- **Multiple Timeframes** - View 1-day, 5-day, 1-month, 3-month, 6-month, 1-year, and 5-year charts
+- **Extended Hours Trading** - Track pre-market and after-hours price movements
 
 ### 🤖 AI Assistant
 - **AI Chat** - Ask questions and get intelligent responses powered by DeepSeek AI
@@ -76,6 +86,13 @@ All commands use Discord's slash command interface. Type `/` in Discord to see t
 
 **Supported Sports:** NFL, NBA, MLB
 
+### Stock Commands
+| Command | Description | Usage |
+|---------|-------------|-------|
+| `/stock` | Get stock information and chart | `/stock ticker:AAPL period:1mo` |
+
+**Supported Periods:** 1d, 5d, 1mo, 3mo, 6mo, 1y, 5y
+
 ### AI Commands
 | Command | Description | Usage |
 |---------|-------------|-------|
@@ -97,13 +114,15 @@ omni-bot/
 │   ├── __init__.py
 │   ├── general.py      # General utility commands
 │   ├── llm.py          # AI chat functionality
-│   └── sports.py       # Sports statistics & betting
+│   ├── sports.py       # Sports statistics & betting
+│   └── stocks.py       # Stock market data & charts
 ├── utils/
 │   ├── __init__.py
 │   ├── ai_helper.py    # AI response handling
 │   ├── helper_functions.py
 │   ├── injuries.py     # Injury data fetching
-│   └── lines.py        # Betting lines fetching
+│   ├── lines.py        # Betting lines fetching
+│   └── stock_helpers.py # Stock data & chart generation
 ├── .env                # Environment variables (not tracked)
 ├── .gitignore
 ├── main.py             # Bot entry point
@@ -114,6 +133,8 @@ omni-bot/
 ## 🛠️ Tech Stack
 
 - **Discord.py** - Discord bot framework
+- **yfinance** - Real-time stock market data
+- **matplotlib** - Chart generation and visualization
 - **OpenAI SDK** - AI integration (DeepSeek)
 - **Python-dotenv** - Environment variable management
 

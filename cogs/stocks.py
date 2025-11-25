@@ -60,11 +60,19 @@ class Stocks(commands.Cog):
             "5y" : "past 5 years"
         }
 
+        description = ""
+        # adds prepost data if exists
+        if 'prepost_label' in stock_data:
+            change_emoji = "🟢" if stock_data['prepost_change'] >= 0 else "🔴"
+            description = f"`{change_emoji} {stock_data['prepost_label']}: ${stock_data['prepost_close']:.2f} {stock_data['prepost_change']:+.2f} ({stock_data['prepost_change_pct']:+.2f}%)`"
+
+
         embed = discord.Embed(
             title=f"📈 {ticker} - {stock_data['name']}\n${stock_data['current_price']:.2f}\n{stock_data['change']:+.2f} ({stock_data['change_pct']:+.2f}%) {arrow_icon} {period_to_text[period]}",
+            description=description,
             color=color
         )
-
+        
         embed.add_field(
             name="📂 Open",
             value=f"${stock_data['open_price']:.2f}" if isinstance(stock_data['open_price'], (float, int)) else "N/A",
